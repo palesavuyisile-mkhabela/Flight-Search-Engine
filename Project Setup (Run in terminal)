@@ -1,0 +1,3 @@
+npx create-next-app@latest flight-search-engine --typescript --tailwind --app
+cd flight-search-engine
+npm install recharts zustand axios

@@ -1,0 +1,6 @@
+.input {
+  @apply border p-2 rounded w-full;
+}
+.btn {
+  @apply bg-black text-white px-4 py-2 rounded;
+}

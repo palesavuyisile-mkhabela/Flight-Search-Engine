@@ -1,0 +1,90 @@
+A modern flight search engine built with Next.js (App Router), TypeScript, Tailwind CSS, Zustand for state management, Axios for API calls, and Recharts for live price visualization. This project integrates the Amadeus Flight Offers API to provide real-time flight search results with filtering and price charting capabilities.
+
+---
+
+## Features
+
+- Search flights by origin, destination, and departure date
+- Filter results by the number of stops (non-stop, 1 stop, 2+ stops)
+- Live price chart visualization of filtered flight offers
+- Global state management with Zustand for filters and data
+- Server-side API route to securely fetch data from Amadeus API
+- Responsive design with Tailwind CSS
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or newer recommended)
+- Amadeus API credentials (Client ID and Client Secret)
+
+### Installation
+
+1. Clone the repository or create a new Next.js app following the setup instructions below.
+2. Install dependencies:
+
+bash npm install
+
+
+3. Create a `.env.local` file in the root directory with your Amadeus API credentials:
+
+env AMADEUSCLIENTID=YOURAMADEUSCLIENTID AMADEUSCLIENTSECRET=YOURAMADEUSCLIENTSECRET
+
+
+---
+
+## Usage
+
+### Run the development server
+
+bash npm run dev
+
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to access the app.
+
+### Search Flights
+
+- Enter the origin airport code, destination airport code, and select a departure date.
+- Click the **Search** button to fetch flight offers.
+- Use the filters to refine results based on the number of stops.
+- View the live price chart and browse through flight cards showing flight details and prices.
+
+---
+
+## Project Structure
+
+- `app/` — Main application with Next.js App Router
+- `app/api/flights/route.ts` — API route to fetch flight data from Amadeus
+- `components/` — React components (SearchForm, Filters, FlightCard, PriceChart)
+- `lib/amadeus.ts` — Amadeus API client with token management
+- `store/flightStore.ts` — Zustand store for global state management
+- `app/globals.css` — Global styles with Tailwind helpers
+
+---
+
+## Technologies
+
+- [Next.js](https://nextjs.org/) (TypeScript, App Router)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Zustand](https://zustand-demo.pmnd.rs/)
+- [Axios](https://axios-http.com/)
+- [Recharts](https://recharts.org/)
+- [Amadeus API](https://developers.amadeus.com/)
+
+---
+
+## Notes
+
+- This project uses the Amadeus **test** environment API endpoint. For production usage, update to the live endpoint and ensure compliance with Amadeus API terms.
+- The API client caches the access token to reduce authentication requests.
+- Filtering logic applies on the client side for demonstration; consider server-side filtering for large datasets.
+
+---
+
+## License
+
+MIT License
+
+---
